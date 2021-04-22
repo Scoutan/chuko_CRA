@@ -1,0 +1,304 @@
+body {
+  font-size: 100%;  
+  background-color: rgb(222 222 222 / 30%);
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+.global-container {
+  margin: auto;
+  width: 90%;
+  min-width: 600px; 
+  padding: 10px;
+}
+
+.main-menu {
+  background-color: white;
+  border: 1px solid rgba(34,36,38,.15);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  padding: 10px 15px 15px 15px;
+  margin: 0 0 10px 0;
+}
+
+.button {
+  background-color: #e0e1e2;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  margin: 0 5px 0 0;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #bebebe;
+}
+
+.button:active {
+  border: none;
+  background-color: #b4b4b4;
+}
+
+.fetchbar {
+  display: inline-flex;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.fetchbar input {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 0 5px 0 0;
+}
+
+/* ===Dimmer.js=== */
+.dimmer {
+  display: block;
+  background-color: rgba(0 0 0 / .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.dimmer .loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 50px;
+  height: 50px;
+  margin: -35px 0 0 -35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: spin 0.5s linear infinite;
+  z-index: 200;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dimmer .message {
+  color: black;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 300;
+}
+
+/* ===ItemList.js=== */
+.view-menu {  
+  background-color: white;
+  border: 1px solid rgba(34,36,38,.15);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  padding: 10px 15px 15px 15px;
+  margin: 0 0 10px 0;
+}
+
+.contents {
+  display: block;
+  margin: auto;
+  counter-reset: myCounter;
+}
+
+.contents.animate-bottom {
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 0.5s;
+}
+
+@keyframes animatebottom {
+  from { bottom: -30px; opacity: 0; }
+  to { bottom: 0px; opacity: 1; } 
+}
+
+/* ===ItemDetail.js=== */
+/* Grid */
+.contents .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card { 
+  position: relative;
+  width: 300px;
+  margin: 10px 5px;
+  font-size: 1.1em;
+  text-align: center;
+  border: 3px solid rgba(0 200 0 / 0.3);
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 50px 0;
+  border-color: transparent #007adfbc transparent transparent;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.card::before {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+
+  font-size: 1.3em;
+  color: white;
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  z-index: 1;
+}
+
+.card.red {
+  border-color: rgba(200 0 0 / 0.7);
+}
+
+.card .image {
+  width: 100%;
+  min-height: 300px;
+}
+
+.card .image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.card .description {
+  padding: 0px;
+}
+
+.card .header {
+  font-size: 1.1em;
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow: hidden;
+  height: 66px;
+  margin: 0 0 10px 0;
+  padding: 0 5px;
+}
+
+.card .section {
+  border-top: 1px solid rgb(180 180 180 / 50%);
+  padding: 5px 0;
+}
+
+.card .section.box-wrapper {
+  display: flex;
+}
+
+.card .box {
+  flex: 1;
+}
+
+.card .icon {
+  height: 30px;
+  max-width: 100px;
+  margin: auto;
+}
+
+.card .icon img {
+  vertical-align: middle;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+/* List */
+.contents .list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  background-color: white;
+  position: relative;
+  display: flex;
+  border: 2px solid rgba(0 200 0 / 0.5);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  margin: 0 0 10px 0;
+  padding: 5px;
+}
+
+.list-container::before {
+  counter-increment: myCounter;
+  content: counter(myCounter);
+
+  font-size: 11vw;
+  color: #007bdf96;
+  position: absolute;
+  right: 50px;
+  bottom: 30px;
+  z-index: 1;
+}
+
+.list-container.red {
+  border-color: rgba(200 0 0 / 0.7);
+}
+
+.list-container .image {
+  width: 20%;
+  margin: 0 15px 0 0;
+}
+
+.list-container .image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.list-container .description {
+  width: 80%;
+  font-size: 1.15em;
+}
+
+.list-container .header {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.list-container .section {
+  margin: 5px 0;
+  padding: 0 0 0 5px;
+}
+
+.list-container .section.box-wrapper {
+  display: inline-flex;
+}
+
+.list-container .box {
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0 20px 0 0;
+}
+
+.list-container .box.red {
+  border: 1px dashed rgba(200 0 0 / 0.7);
+}
+
+.list-container .icon {
+  height: 30px;
+  margin: 0 0 3px 0;
+}
+
+.list-container .icon img {
+  vertical-align: middle;
+  max-height: 100%;
+  max-width: 100%;
+}
