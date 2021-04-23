@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import NavBar from './NavBar';
 import Menu from './Menu';
 import ItemList from './ItemList';
 import FetchInfo from './FetchInfo';
@@ -109,6 +110,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="global-container">
+        <NavBar />
         <Menu
           load={() => this.handleLoad()}
           test={() => this.handleTest()}
