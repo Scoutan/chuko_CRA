@@ -56,7 +56,7 @@ h3 {
 /* ===Dimmer.js=== */
 .dimmer {
   display: block;
-  background-color: rgba(0 0 0 / .5);
+  background-color: rgba(0 0 0 / .85);
   position: fixed;
   top: 0;
   left: 0;
@@ -76,7 +76,7 @@ h3 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: spin 0.5s linear infinite;
+  animation: spin 0.2s linear infinite;
   z-index: 200;
 }
 
@@ -86,7 +86,8 @@ h3 {
 }
 
 .dimmer .message {
-  color: black;
+  font-size: 1.5em;
+  color: #19a2fd;
   position: absolute;
   top: 55%;
   left: 50%;
