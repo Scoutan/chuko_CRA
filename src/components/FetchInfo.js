@@ -1,4 +1,4 @@
-import { HSdomain, BFdomain, MFCdomain } from './Constants';
+import { HSdomain, BFdomain, MFCdomain, CORS } from './Constants';
 import cheerio from 'cheerio';
 import axios from 'axios';
 
@@ -26,7 +26,7 @@ const fetchHS = async (url) => {
   const item = [];
 
   console.log("Fetching info from Hobby Search by ID...");
-  const res1 = await axios.get(`${HSdomain}/eng/${itemID}`);
+  const res1 = await axios.get(`${CORS + HSdomain}/eng/${itemID}`);
   const $1 = cheerio.load(res1.data);
   console.log("Success!");
 
@@ -41,14 +41,14 @@ const fetchHS = async (url) => {
   item['MFCurl'] = MFCdomain + item['JAN'];
 
   console.log("Fetching info from buyfriend by JAN code...");
-  const res2 = await axios.get(BFdomain + item.JAN);
+  const res2 = await axios.get(CORS + BFdomain + item.JAN);
   const $2 = cheerio.load(res2.data);
   console.log("Success!");
 
   item['AAurl'] = $2('.new_item a').attr('href').match(/(=)(.+)/)[2];
 
   console.log("Fetching stock from AmiAmi...");
-  const res3 = await axios.get(BFdomain + item.AAurl)
+  const res3 = await axios.get(CORS + BFdomain + item.AAurl)
   const $3 = cheerio.load(res3.data);
   console.log("Success!");
 
@@ -63,7 +63,7 @@ const fetchHS = async (url) => {
 
 const fetchAA = async (url) => {
   console.log("Fetching info from amiami by ID...");
-  const res1 = await axios.get(BFdomain + url);
+  const res1 = await axios.get(CORS + BFdomain + url);
   const $1 = cheerio.load(res1.data);
   console.log("Success!");
 
@@ -81,7 +81,7 @@ const fetchAA = async (url) => {
   item['JAN'] = JAN;
   item['MFCurl'] = MFCdomain + JAN;
 
-  const res2 = await axios.get(`${HSdomain}/eng/search?searchkey=${item.JAN}`);
+  const res2 = await axios.get(`${CORS + HSdomain}/eng/search?searchkey=${item.JAN}`);
   const $2 = cheerio.load(res2.data)
 
   if ($2('#masterBody_pnlNonSearch').html() != null) {
@@ -111,7 +111,7 @@ const fetchStock = async (item) => {
   console.log('AA updated!');
   if (item.HSstock !== 'N/A') {
     console.log('Fetching stock from HS...');
-    const res2 = await axios.get(`${HSdomain}/eng/search?searchkey=${item.JAN}`);
+    const res2 = await axios.get(`${CORS + HSdomain}/eng/search?searchkey=${item.JAN}`);
     const $2 = cheerio.load(res2.data)
     item['HSstock'] = (($2('.cart_button2').html() != null) ? 'Out of Stock' : 'In Stock');
     console.log('HS updated!');
