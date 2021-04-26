@@ -20,7 +20,7 @@ const ItemList = (props) => {
 
   return (
     <div>
-      <div className="view-menu">
+      <div className="container">
         <span>Layout options: </span>
         <button className="button" onMouseDown={() => dispatch('reset')} onClick={() => dispatch('cards')}>Cards</button>
         <button className="button" onMouseDown={() => dispatch('reset')} onClick={() => dispatch('list')}>List</button>

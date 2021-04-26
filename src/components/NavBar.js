@@ -1,22 +1,39 @@
 import React from 'react';
-import SignIn from './SignIn';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <div className="nav">
       <div className="nav_link">
-        <a href="/">Home</a>
+        <Link to="/">
+          Home
+        </Link>
       </div>
       <div className="nav_link">
-        <a href="/">Item Watches</a>
+        <Link to="/blog">
+          Blog
+        </Link>
       </div>
       <div className="nav_link">
-        <a href="/">FAQ</a>
+        <Link to="/watches">
+          Item Watches
+        </Link>
       </div>
       <div className="nav_link">
-        <a href="/">Contact</a>
+        <Link to="/faq">
+          FAQ
+        </Link>
       </div>
-      <SignIn />
+      <div className="nav_link">
+        <Link to="/contact">
+          Contact
+        </Link>
+      </div>
+      <div className="nav_sign-in">
+        <Link to="/signin">
+          Sign In
+        </Link>
+      </div>
     </div>
   )
 }

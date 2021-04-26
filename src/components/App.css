@@ -3,6 +3,10 @@ body {
   background-color: rgb(222 222 222 / 30%);
 }
 
+h2 {
+  font-size: 1.7em;
+}
+
 h3 {
   font-size: 1.3em;
 }
@@ -12,6 +16,67 @@ h3 {
   width: 90%;
   min-width: 600px; 
   padding: 10px;
+}
+
+.container {
+  background-color: white;
+  border: 1px solid rgba(34,36,38,.15);  
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
+  padding: 10px 15px 15px 15px;
+  margin: 0 0 10px 0;
+}
+
+.banner {
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+
+.banner_textbox {
+  display: inline-block;
+  border: 2px solid rgba(0 0 0 / 1);
+  font-size: 3em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  padding: 8px 20px;
+  height: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+  overflow: hidden;
+  
+  animation-name: border-opacity;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes border-opacity {
+  0%, 40%, 50%, 90%, 100% {border-color: rgba(0 0 0 / 1);}
+  45%, 85% {border-color: rgba(0 0 0 / 0);}
+}
+
+.banner_animation_display {
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner_list {
+  animation-name: change;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes change {
+  0%, 40%, 90%, 100% {transform: translate3d(0,0,0);}
+  50%, 80% {transform: translate3d(0,-50%,0);}
+}
+
+.banner_list_item {
+  line-height: 100%;
 }
 
 .nav {
@@ -31,11 +96,12 @@ h3 {
   padding: 0 20px;
 }
 
-.sign-in {
+.nav .nav_sign-in {
   position: absolute;
   display: inline;
   right: 0;
   margin: 0 15px 0 0;
+  vertical-align: middle;
 }
 
 .main-menu {
@@ -119,16 +185,14 @@ h3 {
   z-index: 300;
 }
 
-/* ===ItemList.js=== */
-.view-menu {  
-  background-color: white;
-  border: 1px solid rgba(34,36,38,.15);
-  border-radius: 4px;
-  box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
-  padding: 10px 15px 15px 15px;
-  margin: 0 0 10px 0;
+/* ===Blog.js=== */
+.blog_entry {
+  border-bottom: 1px dashed black;
+  padding: 0 0 20px 0;
 }
 
+
+/* ===ItemList.js=== */
 .contents {
   display: block;
   margin: auto;

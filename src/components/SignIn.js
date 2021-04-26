@@ -2,10 +2,8 @@ import React from 'react';
 
 const SignIn = () => {
   return (
-    <div className="sign-in">
-      <button className="button">Sign In</button>
-    </div>
-  )
+    <div>Sign In page</div>
+  );
 }
 
 export default SignIn;
