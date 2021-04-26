@@ -72,7 +72,7 @@ h3 {
 
 @keyframes change {
   0%, 40%, 90%, 100% {transform: translate3d(0,0,0);}
-  50%, 80% {transform: translate3d(0,-55%,0);}
+  50%, 80% {transform: translate3d(0,-53%,0);}
 }
 
 .banner_list_item {
