@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from '../history';
+import UserAccess from './UserAccess';
 import Banner from './Banner';
 import NavBar from './NavBar';
 import Home from './Home';
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <div className="global-container">
       <Router history={history}>
+        <UserAccess />
         <Banner />
         <NavBar />
         <Switch>

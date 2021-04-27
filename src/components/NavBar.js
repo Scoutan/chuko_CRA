@@ -3,35 +3,32 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <div className="nav">
-      <div className="nav_link">
+    <div className="container">
+      <div className="nav">
         <Link to="/">
-          Home
+          <div className="nav_link">
+            Home
+          </div>
         </Link>
-      </div>
-      <div className="nav_link">
         <Link to="/blog">
-          Blog
+          <div className="nav_link two">
+            Blog
+          </div>
         </Link>
-      </div>
-      <div className="nav_link">
         <Link to="/watches">
-          Item Watches
+          <div className="nav_link three">
+            Item Watches
+          </div>
         </Link>
-      </div>
-      <div className="nav_link">
         <Link to="/faq">
-          FAQ
+          <div className="nav_link four">
+            FAQ
+          </div>
         </Link>
-      </div>
-      <div className="nav_link">
         <Link to="/contact">
-          Contact
-        </Link>
-      </div>
-      <div className="nav_sign-in">
-        <Link to="/signin">
-          Sign In
+          <div className="nav_link five">
+            Contact
+          </div>
         </Link>
       </div>
     </div>
