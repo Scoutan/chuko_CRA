@@ -23,25 +23,27 @@ const SignIn = () => {
 
   return (
     <div className="container">
-      <h2>Sign In</h2>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <label>
-          Email:
-          <input
-            name="email"
-            type="text"
-            value={formValues.email}
-            onChange={(e) => handleChange(e)} />
-        </label>
-        <label>
+      <h2 className="page_title">SIGN IN</h2>
+      <form className="form_container" onSubmit={(e) => handleSubmit(e)}>
+        <div className="field_label">
+          <span>Email:</span>
+        </div>
+        <input
+          className="field_input"
+          name="email"
+          type="text"
+          value={formValues.email}
+          onChange={(e) => handleChange(e)} />
+        <div className="field_label">
           Password:
-          <input
-            name="password"
-            type="text"
-            value={formValues.password}
-            onChange={(e) => handleChange(e)} />
-        </label>
-        <input type="submit" value="Submit" />
+        </div>
+        <input
+          className="field_input"
+          name="password"
+          type="text"
+          value={formValues.password}
+          onChange={(e) => handleChange(e)} />
+        <input className="button" type="submit" value="Sign In" />
       </form>
     </div>
   );

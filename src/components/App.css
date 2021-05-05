@@ -1,10 +1,15 @@
 body {
-  font-size: 100%;  
+  font-size: 100%; 
   background-color: rgb(222 222 222 / 30%);
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 h2 {
   font-size: 1.7em;
+}
+
+.page_title {
+  margin: 10px 0 0 20px;
 }
 
 h3 {
@@ -32,7 +37,7 @@ a:hover {
   border: 1px solid rgba(34,36,38,.15);  
   border-radius: 4px;
   box-shadow: 0 1px 2px 0 rgb(34 36 38 / 15%);
-  padding: 10px 10px;
+  padding: 10px 15px;
   margin: 0 0 10px 0;
 }
 
@@ -49,14 +54,13 @@ a:hover {
   height: 100px;
   line-height: 100px;
   text-align: center;
-  margin: 0 0 10px 0;
+  margin: 0 auto 10px auto;
 }
 
 .banner_textbox {
   display: inline-block;
   border: 2px solid rgba(0 0 0 / 1);
   font-size: 3.0em;
-  font-family: Helvetica, Arial, sans-serif;
   font-weight: 900;
   padding: 8px 20px;
   height: 50px;
@@ -97,7 +101,7 @@ a:hover {
 
 .nav {
   box-sizing: border-box;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   text-align: center;
 }
@@ -191,6 +195,24 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 300;
+}
+
+/* ===SignIn.js=== */
+.form_container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.field_label {
+  font-size: 1.2em;
+  margin: 0 0 2px 0;
+}
+
+.field_input {
+  width: 100%;
+  height: 20px;
+  padding: 2px;
+  margin: 0 0 10px 0;
 }
 
 /* ===Blog.js=== */

@@ -107,7 +107,8 @@ class Watches extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
+        <h2>ITEM WATCHES</h2>
         <Menu
           load={() => this.handleLoad()}
           test={() => this.handleTest()}
