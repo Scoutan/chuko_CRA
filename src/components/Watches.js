@@ -25,14 +25,14 @@ class Watches extends React.Component {
   }
 
   componentDidMount() {
-    this.setState({ items: LoadStatic.items });
+    this.setState({ items: [...LoadStatic.items] });
   }
 
   async handleLoad() {
     //const res = await itemsAPI.get('/items');
 
     //this.setState({ items: res.data });
-    this.setState({ items: LoadStatic.items });
+    this.setState({ items: [...LoadStatic.items] });
   }
 
   async handleTest() {
