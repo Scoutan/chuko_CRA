@@ -8,12 +8,22 @@ h2 {
   font-size: 1.7em;
 }
 
-.page_title {
-  margin: 10px 0 0 20px;
-}
-
 h3 {
   font-size: 1.3em;
+}
+
+p {
+  display: inline-block;
+  overflow: hidden;
+  width: 80%;
+  margin: 0 0 25px 50px;
+  font-size: 1.08em;
+  line-height: 2;
+}
+
+p.introduction {
+  border: 1px dashed rgb(100, 100, 100);
+  padding: 2px 10px;
 }
 
 a {
@@ -39,7 +49,7 @@ a:hover {
 
 .global-container {
   margin: auto;
-  width: 90%;
+  width: 69%;
   min-width: 600px; 
   padding: 10px;
 }
@@ -67,6 +77,10 @@ a:hover {
   line-height: 100px;
   text-align: center;
   margin: 0 auto 10px auto;
+}
+
+.banner a {
+  color: black;
 }
 
 .banner_textbox {
