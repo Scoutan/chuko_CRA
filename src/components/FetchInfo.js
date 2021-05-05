@@ -71,7 +71,7 @@ const fetchAA = async (url) => {
   const infoClass = '.item_detail_right';
 
   item['AAurl'] = url;
-  item['itemID'] = $1('h3').text().match(/(?:scode=|gcode=)([a-zA-Z]+-[0-9]+)/)[1];
+  item['itemID'] = $1('h3').text().match(/(?:scode=|gcode=)([a-zA-Z]+-[a-zA-Z0-9-]+)/)[1];
   item['image'] = $1('.item_detail_left img').first().attr('src');
   item['AAtitle'] = $1(`${infoClass} div`).first().text();
   item['AAprice'] = $1(infoClass).text().match(/Price: ([0-9]+ [A-Z]+)/)[1].replace(/([0-9]+)(.{7})/, '$1,$2');
