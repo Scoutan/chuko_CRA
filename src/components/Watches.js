@@ -5,6 +5,7 @@ import FetchInfo from './FetchInfo';
 import FetchTestDB from '../api/FetchTestDB.json';
 //import itemsAPI from '../api/items';
 import LoadStatic from '../api/db.json';
+import Intro from './Intro';
 
 class Watches extends React.Component {
   constructor(props) {
@@ -109,6 +110,7 @@ class Watches extends React.Component {
     return (
       <div className="container">
         <h2>ITEM WATCHES</h2>
+        <Intro page="watches" />
         <Menu
           load={() => this.handleLoad()}
           test={() => this.handleTest()}
