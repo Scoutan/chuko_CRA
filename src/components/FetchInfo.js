@@ -105,7 +105,7 @@ const fetchAA = async (url) => {
 
 const fetchStock = async (item) => {
   console.log('Fetching stock from AA...');
-  const res1 = await axios.get(BFdomain + item.AAurl);
+  const res1 = await axios.get(CORS + BFdomain + item.AAurl);
   const $1 = cheerio.load(res1.data);
   item['AAstock'] = $1('.item_detail_right').text().match(/Stock Available: ([0-9]+)/)[1];
   console.log('AA updated!');
