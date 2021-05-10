@@ -267,7 +267,7 @@ a:hover {
 }
 
 /* ===ItemDetail.js=== */
-/* Grid */
+/* Cards */
 .contents .cards {
   display: flex;
   flex-direction: row;
