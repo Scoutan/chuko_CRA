@@ -5,7 +5,7 @@ const Faq = () => {
   return (
     <div className="container">
       <h2>FAQ</h2>
-      <Intro page="faq" />
+      {/* <Intro page="faq" /> */}
     </div>
   );
 }

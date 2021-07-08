@@ -4,7 +4,7 @@ import FetchBar from './FetchBar';
 const Menu = (props) => {
   return (
     <div className="main-menu">
-      <button className="button" onClick={props.load}>
+      {/* <button className="button" onClick={props.load}>
         Load from file
       </button>
       <button className="button" onClick={props.save}>
@@ -12,7 +12,7 @@ const Menu = (props) => {
       </button>
       <button className="button" onClick={props.clear}>
         Clear file
-      </button>
+      </button> */}
       <button className="button" onClick={props.test}>
         Fetch Test
       </button>

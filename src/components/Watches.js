@@ -110,7 +110,7 @@ class Watches extends React.Component {
     return (
       <div className="container">
         <h2>ITEM WATCHES</h2>
-        <Intro page="watches" />
+        {/* <Intro page="watches" /> */}
         <Menu
           load={() => this.handleLoad()}
           test={() => this.handleTest()}

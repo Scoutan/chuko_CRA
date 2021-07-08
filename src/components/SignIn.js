@@ -25,7 +25,7 @@ const SignIn = () => {
   return (
     <div className="container">
       <h2 className="page_title">SIGN IN</h2>
-      <Intro page="signin" />
+      {/* <Intro page="signin" /> */}
       <form className="form_container" onSubmit={(e) => handleSubmit(e)}>
         <div className="field_label">
           <span>Email:</span>

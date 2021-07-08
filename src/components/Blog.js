@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <div className="container">
       <h2>BLOG</h2>
-      <Intro page="blog" />
+      {/* <Intro page="blog" /> */}
       {
         blogEntries.sort((a, b) => b.num_date - a.num_date).map(entry => {
           return (
