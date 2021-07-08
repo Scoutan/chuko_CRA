@@ -7,26 +7,21 @@ const NavBar = () => {
       <div className="nav">
         <Link to="/">
           <div className="nav_link">
-            Home
-          </div>
-        </Link>
-        <Link to="/blog">
-          <div className="nav_link two">
-            Blog
-          </div>
-        </Link>
-        <Link to="/watches">
-          <div className="nav_link three">
             Item Watches
           </div>
         </Link>
+        <Link to="/blog">
+          <div className="nav_link">
+            Blog
+          </div>
+        </Link>
         <Link to="/faq">
-          <div className="nav_link four">
+          <div className="nav_link">
             FAQ
           </div>
         </Link>
         <Link to="/contact">
-          <div className="nav_link five">
+          <div className="nav_link">
             Contact
           </div>
         </Link>

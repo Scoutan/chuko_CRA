@@ -20,9 +20,8 @@ const App = () => {
         <Banner />
         <NavBar />
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact component={Watches} />
           <Route path="/blog" exact component={Blog} />
-          <Route path="/watches" exact component={Watches} />
           <Route path="/faq" exact component={Faq} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/signin" exact component={SignIn} />
