@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+<h1>Chuko</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first personal project using React. The conception of this project has been inspired by a website that I have discovered recently, <a href="https://buyfriend.moe">buyfriend.moe</a>. Currently, its central function is to fetch public information found on other websites and display it on one page, for ease of viewing. The scope of this project is limited to shopping for figures and hobbies, notably from japan, e.g. “<a href="https://amiami.com">amiami.com</a>”.
 
-## Available Scripts
+<h2>Sections</h2>
 
-In the project directory, you can run:
+<h3>Item Watches</h3>
+<p>This is where the user can fetch item information from supported websites to display and organize each one on the same page. It shares functional similarities to a shopping wish list, which is to facilitate the access to your items of interest. Currently, only two websites are supported i.e. <a href="https://1999.co.jp/eng">HobbySearch</a> and <a href="https://amiami.com/eng">amiami</a> and HTTP requests are used to fetch the HTML page of the requested item, via URL on the respective website. Then, I use the HTML parser tool, Cheerio.js, and regex to extract all relevant information, such as item ID, price, and stock. The information is stored into this class component’s state (note that I intentionally made this as the only class component of this project as a way to practice with it).</p>
+<p>I plan to include additional features such as:</p>
+<ol>
+  <li>Selectively update information to avoid the potential long response time from many simultaneous HTTP requests (e.g. “update stock” button);</li>
+  <li>Multiple layout options to view the gathered information (e.g. “Cards” view and “List” view;</li>
+  <li>Different sorting options;</li>
+  <li>To show or hide some information;</li>
+  <li>To customize the placement of information on particular layout options;</li>
+  <li>User login with saved preferences of the features;</li>
+  <li>Notification (browser/email) options for when the stock of an item has changed;</li>
+  <li>Expand the list of websites from which information is fetched;</li>
+  <li>Show a history of previously fetched data;</li>
+</ol>
 
-### `npm start`
+<h3>Blog</h3>
+This section will show blog posts with insightful information about any items. The posts will be sorted from the most recent to the oldest and link to the page with the full article. My goal is to create or implement an input interface which can be used to style the post, such as headings, font size, indentations, paragraph separation, and so on (i.e. similar to a CMS). It will be connected to an API server as its database.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3>FAQ</h3>
+<p>If there are enough visitors once this project goes live, I expect to have some frequently asked questions. So, this section is where I list the questions along with my responses.</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<h3>Contact</h3>
+</p>This section would simply have a contact form which will be linked to an email address.</p>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>Sign In / Register</h3>
+<p>Ultimately, I would like to have a user database for the purpose of letting users save their preferences on their layout options, custom placement of information, notification setting, and such. I have yet to look into the secure handling and storing of user credentials, so until then, this section will be for internal users only.</p>
