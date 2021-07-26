@@ -276,6 +276,18 @@ a:hover {
   justify-content: space-evenly;
 }
 
+@media only screen and (min-width: 980px) {
+  .contents .cards {
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .contents .cards {
+    justify-content: space-evenly;
+  }
+}
+
 .card { 
   position: relative;
   width: 300px;
