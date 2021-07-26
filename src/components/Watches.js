@@ -109,7 +109,7 @@ class Watches extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>ITEM WATCHES</h2>
+        {/* <h2>ITEM WATCHES</h2> */}
         {/* <Intro page="watches" /> */}
         <Menu
           load={() => this.handleLoad()}
