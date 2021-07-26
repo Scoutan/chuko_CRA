@@ -16,9 +16,9 @@ const App = () => {
   return (
     <div className="global-container">
       <Router history={history}>
-        <UserAccess />
+        {/* <UserAccess /> */}
         <Banner />
-        <NavBar />
+        {/* <NavBar /> */}
         <Switch>
           <Route path="/" exact component={Watches} />
           <Route path="/blog" exact component={Blog} />
